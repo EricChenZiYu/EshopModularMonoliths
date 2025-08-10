@@ -1,0 +1,12 @@
+services:
+  eshopdb:
+    container_name: eshopdb
+    volumes:
+      - eshopdb_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: EShopDb
+    restart: always
+    ports:
+      - "5432:5432"
